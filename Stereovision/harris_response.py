@@ -6,11 +6,10 @@ Created on Tue Oct 22 11:26:31 2019
 """
 
 import derivatives
-from PIL import Image
 from pylab import *
 from numpy import *
 from scipy.ndimage import filters
-from scipy.misc import imsave
+
 
 def compute_harris_response(im,sigma=3):
     
@@ -24,6 +23,7 @@ def compute_harris_response(im,sigma=3):
     Wtr = Wxx + Wyy
     
     return Wdet / Wtr
+
 
 def get_harris_points(harrisim, min_dist = 10, threshold=0.1):
     """ Return corners from a Harris response image, min_dist is the minimum 
@@ -55,6 +55,7 @@ def get_harris_points(harrisim, min_dist = 10, threshold=0.1):
                               (coords[i,1]-min_dist):(coords[i,1]+min_dist)] = 0
     
     return filtered_coords
+
 
     def plot_harris_points(image, filtered_coords):
         """ Plots corners found in image. """

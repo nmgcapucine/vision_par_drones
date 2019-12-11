@@ -36,14 +36,6 @@ def match_points(des1, des2):
     return matches
 
 
-def plot_matches(img1, img2, kp1, kp2, matches):
-    img3 = cv2.drawMatches(img1, kp1, img2, kp2, matches, None, flags=2)
-
-    plt.figure()
-    plt.imshow(img3)
-    plt.show()
-
-
 class orb(object):
 
     def __init__(self, nfeatures=1000, scaleFactor=1.3, nlevels=10, edgeThreshold=31, firstLevel=0, WTA_K=2,
