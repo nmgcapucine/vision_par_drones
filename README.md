@@ -2,7 +2,8 @@
 Git pour le projet d'OMA CVN_040
 
 ## Stereovision
-Reconstructing 3D points from sequences of images taken by a drone
+Reconstruction de points 3D à partir de séquences d'images prises par un drône. 
 
 ## Detecting poles
-A Faster-RCNN trained to detect poles on our dataset
+Un Faster-RCNN pour détecter les poteaux entrainé sur une partie du dataset. 
+
